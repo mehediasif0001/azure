@@ -64,6 +64,45 @@ az vm list-ip-addresses -g <rg> -n <vm-name> -o table
 az vm delete -g <rg> -n <vm-name> --yes
 ```
 
+### 🌐 4. Networking & NICs
+
+Managing connectivity, interfaces, and security rules.
+🛠️ Network Interface (NIC) Operations
+
+# List all NICs attached to a specific VM
+```az vm nic list -g <rg> --vm-name <vm-name> -o table```
+
+# Attach an existing NIC to a VM (VM should be deallocated)
+```az vm nic add -g <rg> --vm-name <vm-name> --nics <nic-name>```
+
+# Remove a NIC from a VM
+```az vm nic remove -g <rg> --vm-name <vm-name> --nics <nic-name>```
+
+🛡️ Network Security Groups (NSG)
+
+# List current NSG Rules
+```az network nsg rule list -g <rg> --nsg-name <nsg-name> -o table```
+
+# Create a rule to Allow SSH (Port 22)
+```az network nsg rule create \
+  --resource-group <rg> \
+  --nsg-name <nsg-name> \
+  --name AllowSSH \
+  --priority 100 \
+  --destination-port-ranges 22 \
+  --access Allow \
+  --protocol Tcp
+  ```
+
+### 💾 5. Storage & Disks
+
+Managing Managed Disks and OS storage.
+# List all Managed Disks in a Resource Group
+```az disk list -g <rg> -o table```
+
+# Resize an OS Disk to 128 GB
+```az vm update -g <rg> -n <vm-name> --set storageProfile.osDisk.diskSizeGb=128``` 
+
 
 `az vm delete -g <resource group name> -n <vm name >  `  # delete vm 
 
