@@ -8,6 +8,5 @@
  list attached nic on VM 
 `az vm nic list \
   --resource-group <Resource-Group> \
-  --vm-name xfusion-vm \
-  --output table` 
+  --vm-name <vm name>` 
 
