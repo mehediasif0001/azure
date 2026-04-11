@@ -5,3 +5,9 @@
 
 `az group list -o table` # resource group list . output via table
 
+ list attached nic on VM 
+`az vm nic list \
+  --resource-group <Resource-Group> \
+  --vm-name xfusion-vm \
+  --output table` 
+
