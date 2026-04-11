@@ -41,7 +41,28 @@ az group delete --name <rg-name> --no-wait --yes
 ```
 
 
+---
 
+## 💻 3. Virtual Machines (Compute)
+*Lifecycle and management commands for VM instances.*
+
+### 🚀 Lifecycle Management
+- **Start VM:** `az vm start -g <rg> -n <vm-name>`
+- **Stop VM (Stay Billed):** `az vm stop -g <rg> -n <vm-name>`
+- **Deallocate VM (Stop Billing):** `az vm deallocate -g <rg> -n <vm-name>`
+- **Restart VM:** `az vm restart -g <rg> -n <vm-name>`
+
+### 🔍 Inspection & Deletion
+```
+# List all VMs in current subscription
+az vm list -o table
+
+# Get Public IP of a specific VM
+az vm list-ip-addresses -g <rg> -n <vm-name> -o table
+
+# Delete VM and its resources
+az vm delete -g <rg> -n <vm-name> --yes
+```
 
 
 `az vm delete -g <resource group name> -n <vm name >  `  # delete vm 
@@ -54,4 +75,5 @@ az group delete --name <rg-name> --no-wait --yes
 `az vm nic list
   --resource-group <Resource-Group> 
   --vm-name <vm name>` 
+
 
