@@ -1,118 +1,101 @@
-# ☁️ Azure Administrator CLI Cheat Sheet
+# ☁️ AZURE ADMINISTRATOR & SOLUTIONS ARCHITECT: MASTER CLI CHEAT SHEET
+# Author: Nautilus DevOps | Date: 2026
 
-This repository contains a curated collection of **Azure CLI** commands designed to help Azure Administrators manage infrastructure efficiently. Use this as a quick reference for the AZ-104 exam or daily DevOps tasks.
+# ==========================================================
+# 🚀 MODULE 1: ACCOUNT & SUBSCRIPTION MANAGEMENT
+# ==========================================================
+# Login to Azure
+`az login`
 
----
+# List all subscriptions and find your Tenant ID
+`az account list -o table`
 
-## 🧭 Navigation
-- [Account & Subscriptions](#-1-account--subscription)
-- [Resource Groups](#-2-resource-groups-rg)
-- [Virtual Machines](#-3-virtual-machines-compute)
-- [Networking & NICs](#-4-networking--nics)
-- [Storage & Disks](#-5-storage--disks)
-- [Pro-Tips](#-pro-tips-for-administrators)
+# Switch active subscription
+`az account set --subscription <ID-or-Name>`
 
----
+# Show details of the currently logged-in identity
+`az ad signed-in-user show`
 
-## 🔑 1. Account & Subscription
-*Manage your login session and active environments.*
+# ==========================================================
+# 📦 MODULE 2: RESOURCE GROUPS & TAGGING
+# ==========================================================
+# List all RGs in a specific location
+`az group list --query "[?location=='eastus']" -o table`
 
-| Task | Command |
-| :--- | :--- |
-| **Login to Azure** | `az login` |
-| **List All Subscriptions** | `az account list --output table` |
-| **Switch Subscription** | `az account set --subscription <ID-or-Name>` |
-| **Show Current User** | `az ad signed-in-user show` |
+# Create a new RG with Tags (Crucial for Architect tracking)
+`az group create --name <rg-name> --location <region> --tags Environment=Prod Project=Nautilus`
 
----
+# Delete RG without waiting for confirmation (Force cleanup)
+`az group delete --name <rg-name> --no-wait --yes`
 
-## 📦 2. Resource Groups (RG)
-*The fundamental building block for organizing resources.*
+# ==========================================================
+# 💻 MODULE 3: VIRTUAL MACHINES & SCALE SETS
+# ==========================================================
+# List all VM sizes available in a region
+`az vm list-sizes --location <region> -o table`
 
-```
-# List all Resource Groups
-az group list -o table
+# Deallocate VM (Stops billing for compute resources)
+`az vm deallocate -g <rg> -n <vm>`
 
-# Create a new Resource Group
-az group create --name <rg-name> --location <region-name>
+# Resize a VM (Requires Deallocation)
+`az vm resize -g <rg> -n <vm> --size Standard_D4s_v3`
 
-# Delete a Resource Group (Deletes everything inside!)
-az group delete --name <rg-name> --no-wait --yes
-```
+# Create a VM with SSH keys and managed identity
+`az vm create -g <rg> -n <vm> --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys --assign-identity`
 
+# ==========================================================
+# 🌐 MODULE 4: NETWORKING & SECURITY (NSG/VNET)
+# ==========================================================
+# Create a Virtual Network and Subnet
+`az network vnet create -g <rg> -n <vnet-name> --address-prefix 10.0.0.0/16 --subnet-name <snet-name> --subnet-prefix 10.0.1.0/24`
 
----
+# Peer two Virtual Networks (VNet Peering)
+`az network vnet peering create -g <rg> -n <peer-name> --vnet-name <vnet1> --remote-vnet <vnet2-id> --allow-vnet-access`
 
-## 💻 3. Virtual Machines (Compute)
-*Lifecycle and management commands for VM instances.*
+# List all NICs on a VM
+`az vm nic list -g <rg> --vm-name <vm> -o table`
 
-### 🚀 Lifecycle Management
-- **Start VM:** `az vm start -g <rg> -n <vm-name>`
-- **Stop VM (Stay Billed):** `az vm stop -g <rg> -n <vm-name>`
-- **Deallocate VM (Stop Billing):** `az vm deallocate -g <rg> -n <vm-name>`
-- **Restart VM:** `az vm restart -g <rg> -n <vm-name>`
+# Create an NSG Rule for a specific IP range
+`az network nsg rule create -g <rg> --nsg-name <nsg> --name AllowCorpIP --priority 110 --source-address-prefixes <Your-IP> --destination-port-ranges 80 443 --access Allow`
 
-### 🔍 Inspection & Deletion
-```
-# List all VMs in current subscription
-az vm list -o table
+# ==========================================================
+# 💾 MODULE 5: STORAGE, BLOBS & DISKS
+# ==========================================================
+# --- BASIC BLOB COMMANDS ---
 
-# Get Public IP of a specific VM
-az vm list-ip-addresses -g <rg> -n <vm-name> -o table
+# Upload file (Ensure --name is the cloud destination name)
+`az storage blob upload --account-name <acc> --container-name <con> --name <blob> --file <local_path> --auth-mode login`
 
-# Delete VM and its resources
-az vm delete -g <rg> -n <vm-name> --yes
-```
+# Batch download (Entire Container)
+`az storage blob download-batch --account-name <acc> --source <con> --destination <local_dir>`
 
-### 🌐 4. Networking & NICs
+# --- MANAGED DISKS ---
 
-Managing connectivity, interfaces, and security rules.
-🛠️ Network Interface (NIC) Operations
+# Snapshot a disk (For backups before changes)
+`az snapshot create -g <rg> --name <snap-name> --source <disk-id-or-name>`
 
-# List all NICs attached to a specific VM
-```az vm nic list -g <rg> --vm-name <vm-name> -o table```
+# Resize an OS Disk
+`az vm update -g <rg> -n <vm> --set storageProfile.osDisk.diskSizeGb=128`
 
-# Attach an existing NIC to a VM (VM should be deallocated)
-```az vm nic add -g <rg> --vm-name <vm-name> --nics <nic-name>```
+# ==========================================================
+# 🔐 MODULE 6: IDENTITY & ACCESS CONTROL (IAM)
+# ==========================================================
+# List RBAC role assignments for a user
+`az role assignment list --assignee <user-email> -o table`
 
-# Remove a NIC from a VM
-```az vm nic remove -g <rg> --vm-name <vm-name> --nics <nic-name>```
+# Assign "Contributor" role to a user at the RG level
+`az role assignment create --assignee <user-email> --role "Contributor" --resource-group <rg-name>`
 
-🛡️ Network Security Groups (NSG)
+# ==========================================================
+# 🛠️ MODULE 7: PRO-TIPS & TROUBLESHOOTING
+# ==========================================================
 
-# List current NSG Rules
-```az network nsg rule list -g <rg> --nsg-name <nsg-name> -o table```
+# 💡 ARGUMENT CHECK: Never use "--storage-account". Always use "--account-name".
+# 💡 OUTPUT FILTERING: Use "--query" to filter results (e.g., `az vm list --query "[].name"`).
+# 💡 AUTHENTICATION: Use "--auth-mode login" for Entra ID based storage access.
+# 💡 STATIC IP: Convert Public IP to static: `az network public-ip update -g <rg> -n <ip-name> --allocation-method Static`
+# 💡 COST SAVING: Always use `az vm deallocate` instead of `az vm stop` to stop compute billing.
 
-# Create a rule to Allow SSH (Port 22)
-```az network nsg rule create \
-  --resource-group <rg> \
-  --nsg-name <nsg-name> \
-  --name AllowSSH \
-  --priority 100 \
-  --destination-port-ranges 22 \
-  --access Allow \
-  --protocol Tcp
-  ```
-
-### 💾 5. Storage & Disks
-
-Managing Managed Disks and OS storage.
-# List all Managed Disks in a Resource Group
-```az disk list -g <rg> -o table```
-
-# Resize an OS Disk to 128 GB
-```az vm update -g <rg> -n <vm-name> --set storageProfile.osDisk.diskSizeGb=128``` 
-
-
-`az vm delete -g <resource group name> -n <vm name >  `  # delete vm 
-
-`az vm list -o table` # list vm output via table
-
-`az group list -o table` # resource group list . output via table
-
- list attached nic on VM 
-`az vm nic list
-  --resource-group <Resource-Group> 
-  --vm-name <vm name>` 
-
-
+# ==========================================================
+# END OF COMPREHENSIVE REPOSITORY
+# ==========================================================
