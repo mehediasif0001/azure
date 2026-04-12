@@ -1,9 +1,9 @@
 # ☁️ AZURE ADMINISTRATOR & SOLUTIONS ARCHITECT: MASTER CLI CHEAT SHEET
 # Author: Mehedi Hasan Asif | Date: 2026
 
-# ==========================================================
+# =================
  🚀 MODULE 1: ACCOUNT & SUBSCRIPTION MANAGEMENT
-# ==========================================================
+# =================
  Login to Azure
 `az login`
 
@@ -16,9 +16,9 @@
  Show details of the currently logged-in identity
 `az ad signed-in-user show`
 
-# ==========================================================
+# =================
  📦 MODULE 2: RESOURCE GROUPS & TAGGING
-# ==========================================================
+# =================
  List all RGs in a specific location
 `az group list --query "[?location=='eastus']" -o table`
 
@@ -28,9 +28,9 @@
  Delete RG without waiting for confirmation (Force cleanup)
 `az group delete --name <rg-name> --no-wait --yes`
 
-# ==========================================================
+# =================
  💻 MODULE 3: VIRTUAL MACHINES & SCALE SETS
-# ==========================================================
+# =================
  List all VM sizes available in a region
 `az vm list-sizes --location <region> -o table`
 
@@ -43,9 +43,9 @@
  Create a VM with SSH keys and managed identity
 `az vm create -g <rg> -n <vm> --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys --assign-identity`
 
-# ==========================================================
+# =================
  🌐 MODULE 4: NETWORKING & SECURITY (NSG/VNET)
-# ==========================================================
+# =================
  Create a Virtual Network and Subnet
 `az network vnet create -g <rg> -n <vnet-name> --address-prefix 10.0.0.0/16 --subnet-name <snet-name> --subnet-prefix 10.0.1.0/24`
 
@@ -58,9 +58,9 @@
  Create an NSG Rule for a specific IP range
 `az network nsg rule create -g <rg> --nsg-name <nsg> --name AllowCorpIP --priority 110 --source-address-prefixes <Your-IP> --destination-port-ranges 80 443 --access Allow`
 
-# ==========================================================
+# =================
  💾 MODULE 5: STORAGE, BLOBS & DISKS
-# ==========================================================
+# =================
  --- BASIC BLOB COMMANDS ---
 
  Upload file (Ensure --name is the cloud destination name)
@@ -77,18 +77,18 @@
  Resize an OS Disk
 `az vm update -g <rg> -n <vm> --set storageProfile.osDisk.diskSizeGb=128`
 
-# ==========================================================
+# =================
  🔐 MODULE 6: IDENTITY & ACCESS CONTROL (IAM)
-# ==========================================================
+# =================
  List RBAC role assignments for a user
 `az role assignment list --assignee <user-email> -o table`
 
  Assign "Contributor" role to a user at the RG level
 `az role assignment create --assignee <user-email> --role "Contributor" --resource-group <rg-name>`
 
-# ==========================================================
+# =================
  🛠️ MODULE 7: PRO-TIPS & TROUBLESHOOTING
-# ==========================================================
+# =================
 
 💡 ARGUMENT CHECK: Never use "--storage-account". Always use "--account-name".
  💡 OUTPUT FILTERING: Use "--query" to filter results (e.g., `az vm list --query "[].name"`).
@@ -96,6 +96,6 @@
  💡 STATIC IP: Convert Public IP to static: `az network public-ip update -g <rg> -n <ip-name> --allocation-method Static`
  💡 COST SAVING: Always use `az vm deallocate` instead of `az vm stop` to stop compute billing.
 
- ==========================================================
+ =================
  END OF COMPREHENSIVE REPOSITORY
- ==========================================================
+ =================
