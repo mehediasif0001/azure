@@ -15,15 +15,16 @@ This project demonstrates the end-to-end workflow for safeguarding cloud data by
 ## 🛠️ STEP 1: PORTAL CONFIGURATION (DATABASE EXPORT)
 **To safeguard the data, we first initiate the export process to generate a .bacpac file.**
 
-<attach Screenshot_1.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_1.png)
+
 * **Action:** Navigate to the SQL database `datacenter-db`.
 * **Step:** Select the **Export** option from the top navigation bar.
 
-<attach Screenshot_2.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_2.png)
 * **Configuration:** Set the filename to **datacenter-db-backup**.
 * **Target:** Point to storage account **datacenterst18153** and container **datacenter-container-7806**.
 
-<attach Screenshot_3.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_3.png)
 * **Status:** Monitor the 'Request submitted' notification in the Azure Portal.
 * **Verification:** Ensure the **.bacpac** file is visible in the storage container after the background process completes.
 
@@ -32,19 +33,21 @@ This project demonstrates the end-to-end workflow for safeguarding cloud data by
 ## 💻 STEP 2: TERMINAL LOGS & CLI OPERATIONS
 **Once the export is verified in the portal, we transition to the Azure CLI to manage the backup file on the client host.**
 
-<attach Screenshot_4.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_4.png)
+
 * **Environment Check:** Use `az group list` and `az storage account list` to verify the environment.
 * **Target Account:** Confirm **datacenterst18153** is available and status is **available**.
 
-<attach Screenshot_5.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_5.png)
 * **Blob Audit:** List blobs using the CLI to confirm the exact filename and size.
 * **Command:** Initiate the `az storage blob download` command targeting the `/opt` folder.
 
-<attach Screenshot_6.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_6.png)
 * **Progress:** The terminal indicates the download has reached **100.0000%**.
 * **Result:** The backup file is successfully transferred from the Azure Cloud to the landing host.
 
-<attach Screenshot_7.png>
+![image alt](https://github.com/mehediasif0001/azure/blob/main/Backup%20an%20Azure%20SQL%20Database/image/Screenshot_7.png)
+
 * **Final Check:** Run `ls /opt/` to verify physical presence on the disk.
 * **Outcome:** **datacenter-db-backup.bacpac** is confirmed as stored in the target directory.
 
