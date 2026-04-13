@@ -20,42 +20,63 @@ This technical documentation details the automated deployment of a web infrastru
 
 ---
 
-## [CONFIGURATION - GUI ACTIONS]
+## [CONFIGURATION - portal ACTIONS]
 
 ### [STEP 1: IDENTITY AND PLACEMENT]
 * **Action:** Configuration of instance basics and resource grouping.
 * **Process:** Assign `Virtual machine name` as `datacenter-vm`. Select the `kml_rg_main` resource group and the `(US) East US` region.
 * **Expected Result:** Logical resource isolation and geographic placement are established.
-![image](https://github.com/mehediasif0001/azure/blob/main/Nautilus%20Project%20VM/image/Screenshot_1.png)
+![image](https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_1.png)
 
 ### [STEP 2: ARCHITECTURE AND COMPUTE SIZE]
 * **Action:** Selection of OS Image and Hardware Tier.
 * **Process:** Deploy using `Ubuntu Server 24.04 LTS - x64 Gen2`. Select the `Standard_D2s_v3` size (2 vCPUs, 8 GiB memory) to meet the application's performance baseline.
 * **Expected Result:** The compute resource is allocated with specific hardware constraints and a verified Linux kernel.
-![image](https://github.com/mehediasif0001/azure/blob/main/Nautilus%20Project%20VM/image/Screenshot_2.png)
+![image](https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_2.png)
 
 ### [STEP 3: NETWORK SECURITY AND ACCESS]
 * **Action:** Firewall and Authentication configuration.
 * **Process:** Select `Password` for the authentication type. Under `Inbound port rules`, enable `Allow selected ports` and choose `HTTP (80)`.
 * **Expected Result:** Public ingress is permitted for web traffic via the Network Security Group (NSG).
-![image](https://github.com/mehediasif0001/azure/blob/main/Nautilus%20Project%20VM/image/Screenshot_3.png)
+https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_3.png)
 
 ### [STEP 4: NETWORK INFRASTRUCTURE]
 * **Action:** Provisioning of Virtual Network and Public IP.
 * **Process:** Create a new Virtual Network `datacenter-vm-vnet` and a dynamic `Public IP` address `datacenter-vm-ip`.
 * **Expected Result:** The instance is assigned a routable public entry point for internet-based requests.
-![image](https://github.com/mehediasif0001/azure/blob/main/Nautilus%20Project%20VM/image/Screenshot_4.png)
+![image](https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_4.png)
 
----
 
-## [CLI OPERATIONS]
+(https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_5.png)
 
-### [CLOUD-INIT BOOTSTRAP SCRIPT]
-The following shell script is injected into the `Advanced > Custom data` field to automate the package management and service lifecycle:
-
-```bash
+* **add this bash script* ** 
+```
 #!/bin/bash
 sudo apt update -y
 sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
+```
+ 
+### [STEP 6:  varify VM is running state and copy public IP ]
+![image](https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_6.png)
+
+ 
+ 
+### [STEP 7: WEB SERVICE ACCESSIBILITY]
+
+The final validation involves accessing the public endpoint via a browser to ensure the automation script and NSG rules functioned correctly.
+
+
+![image](https://github.com/mehediasif0001/azure/blob/main/Azure-VM-User%20Data%20for%20automation%20/image/Screenshot_7.png)
+
+```
+    Endpoint: Navigate to http://20.124.181.57.
+
+    Result: The Welcome to nginx! landing page confirms the server is reachable.
+
+    Verification: The "Not Secure" tag indicates traffic is flowing over the expected HTTP (Port 80).
+```
+
+* **Author: Mehedi Hasan Asif* **
+Date: April 2026
