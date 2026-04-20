@@ -23,4 +23,17 @@ This repository demonstrates how to set up a secure connection between an Azure 
 
     Verification: Listed blobs via CLI to confirm successful 100% data integrity.
 
+
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_1.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_2.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_3.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_4.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_5.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_6.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_7.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_8.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_9.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_10.png)
+![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_11.png)
+
     
