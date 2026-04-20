@@ -14,10 +14,6 @@ The setup consists of two main components:
 
     Cloud Provider: Microsoft Azure
 
-    Operating System: Ubuntu 22.04 LTS
-
-    Web Server: Apache
-
     Programming: PHP
 
     Database: MySQL (Marketplace Image)
@@ -49,3 +45,13 @@ Bash
     Developed a PHP connection script (db_test.php) to validate real-time database connectivity.
 
     Successfully achieved a "Connected successfully" status, confirming end-to-end integration.
+
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_1.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_2.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_3.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_4.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_5.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_6.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_7.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_8.png)
+![Screenshot](https://github.com/mehediasif0001/azure/blob/main/Azure%20Multi-Tier%20Architecture%3A%20PHP-MySQL%20Cloud%20Integration/image/Screenshot_9.png)
