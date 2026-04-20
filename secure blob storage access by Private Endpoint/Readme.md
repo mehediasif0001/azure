@@ -22,7 +22,24 @@ This repository demonstrates how to set up a secure connection between an Azure 
     Uploaded the file using az storage blob upload with account keys.
 
     Verification: Listed blobs via CLI to confirm successful 100% data integrity.
+💻 Key Commands Used
 
+# create file 
+    echo "this is a test file" > /home/azureuser/testfile.txt
+
+# Uploading file to private container from trusted VM
+    az storage blob upload \
+      --account-name <ACCOUNT_NAME> \
+      --account-key <REDACTED_KEY> \
+      --container-name <CONTAINER_NAME> \
+      --name testfile.txt \
+      --file ~/testfile.txt
+ # varify blob from vm 
+    az storage blob list \
+     --account-name devopsstor23210 \
+     --account-key <YOUR_ACCESS_KEY> \
+     --container-name devops-container23210 \
+     -o table
 
 ![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_1.png)
 ![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_2.png)
