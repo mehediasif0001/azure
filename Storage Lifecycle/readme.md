@@ -8,3 +8,17 @@ In this project, I configured a secure and automated storage solution on Microso
 >> 𝐂𝐨𝐬𝐭 𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧: 𝗜𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁𝗲𝗱 𝗟𝗶𝗳𝗲𝗰𝘆𝗰𝗹𝗲 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝗣𝗼𝗹𝗶𝗰𝗶𝗲𝘀 𝘁𝗼 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗲 𝘁𝗵𝗲 𝗱𝗲𝗹𝗲𝘁𝗶𝗼𝗻 𝗼𝗳 𝗯𝗹𝗼𝗯𝘀 𝗮𝗳𝘁𝗲𝗿 7 𝗱𝗮𝘆𝘀 𝗼𝗳 𝗶𝗻𝗮𝗰𝘁𝗶𝘃𝗶𝘁𝘆.
 
 >>𝗣𝗿𝗲𝗳𝗶𝘅 𝗙𝗶𝗹𝘁𝗲𝗿𝗶𝗻𝗴: 𝗔𝗽𝗽𝗹𝗶𝗲𝗱 𝘀𝗽𝗲𝗰𝗶𝗳𝗶𝗰 𝗿𝘂𝗹𝗲𝘀 𝘁𝗼 𝘁𝗮𝗿𝗴𝗲𝘁 𝗶𝗻𝗱𝗶𝘃𝗶𝗱𝘂𝗮𝗹 𝗰𝗼𝗻𝘁𝗮𝗶𝗻𝗲𝗿𝘀, 𝗲𝗻𝘀𝘂𝗿𝗶𝗻𝗴 𝗽𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝗱𝗮𝘁𝗮 𝗿𝗲𝗺𝗮𝗶𝗻𝗲𝗱 𝘀𝗮𝗳𝗲 𝘄𝗵𝗶𝗹𝗲 𝘁𝗲𝗺𝗽𝗼𝗿𝗮𝗿𝘆 𝗱𝗮𝘁𝗮 𝘄𝗮𝘀 𝗽𝘂𝗿𝗴𝗲𝗱.
+
+![Screenshot1](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_1.png)
+
+![Screenshot2](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_2.png)
+
+![Screenshot3](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_3.png)
+
+![Screenshot4](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_4.png)
+
+![Screenshot5](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_5.png)
+
+![Screenshot6](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_6.png)
+
+![Screenshot7](https://github.com/mehediasif0001/azure/blob/main/Storage%20Lifecycle/image/Screenshot_7.png)
