@@ -35,6 +35,5 @@ This repository demonstrates how to set up a secure connection between an Azure 
 ![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_9.png)
 ![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_10.png)
 ![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_11.png)
-![ss](https://github.com/mehediasif0001/azure/blob/main/secure%20blob%20storage%20access%20by%20Private%20Endpoint/images/Screenshot_12.png)
 
     
