@@ -61,6 +61,39 @@
 # =================
  💾 MODULE 5: STORAGE, BLOBS & DISKS
 # =================
+
+ ``
+ az storage account create --name <account name>  -l <location> -g <RG> --sku <sku type>
+ ``
+
+Create a New Private Azure Blob Container: Name the container xfusion-dest-14379 under the storage account xfusionst14713.
+
+
+
+```
+az storage container create --name xfusion-site-32423-t2q1 --account-name xfusionst11965t2q1 --public-access off
+```
+
+Data Migration: Migrate the file xfusion.txt from the existing xfusion-source-19605 container to the new xfusion-dest-14379 container. 
+
+```
+az storage blob copy start --account-name xfusionst14713 --source-container xfusion-source-19605 --source-blob xfusion.txt --destination-container xfusion-dest-14379 --destination-blob xfusion.txt
+```
+
+chack ;
+
+```
+ az storage blob show   --account-name xfusionst14713   --container-name xfusion-dest-14379   --name xfusion.txt  -o table
+```
+
+if public access enable then browse this link on browser:
+
+```
+https://<accountname>.blob.core.windows.net/<container>/<filename>
+```
+
+ 
+
  --- BASIC BLOB COMMANDS ---
 
  Upload file (Ensure --name is the cloud destination name)
