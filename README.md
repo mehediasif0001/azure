@@ -7,7 +7,7 @@ Welcome to my Azure project repository! This collection documents my journey thr
 
 | No. | 📁 Project Folder | 🎯 Key Focus |
 |:---:|:---|:---|
-| 01 | [**Azure Table Storage**](./azure%20table%20storage ) | NoSQL Data Entities & Task Management. |
+| 01 | [**Azure Table Storage**](./azure%20table%20storage) | NoSQL Data Entities & Task Management. |
 | 02 | [**Encrypt Decrypt using Key Vault**](./Encrypt%20Decrypt%20file%20using%20Key%20Vault) | RSA-4096 Encryption & Secret Management. |
 | 03 | [**Static Website Hosting**](./Static%20website%20hosting%20on%20Azure%20Storage) | Blob Storage Static Web Deployment. |
 | 04 | [**Multi-Tier Architecture**](./Azure%20Multi-Tier%20Architecture:%20PHP-MySQL%20Clo...) | PHP-MySQL Multi-Tier Cloud Setup. |
