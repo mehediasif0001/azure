@@ -116,3 +116,47 @@ Bash
     Identity: Access is managed via Access Policies (Get, List, Encrypt, Decrypt).
 
     Security: By using RSA-4096, we ensure that even if someone steals the EncryptedData.bin file, they cannot read it without access to the Azure Key Vault.
+
+------
+==========================
+------
+
+## 🛠️ Additional Commands & Identity Troubleshooting
+
+In real-world DevOps environments, permissions often cause "Forbidden" errors. Use these commands to identify your identity and fix access issues.
+
+### 1. Identify your Object ID (OID)
+Azure identifies you via a unique **Object ID**, not just your username. If you get an access error, find your ID using:
+
+### Get the Object ID of the currently logged-in user
+        az ad signed-in-user show --query id -o tsv
+
+Why?: Key Vault access policies require this specific ID to grant you permission to use the encryption keys.
+2. Manual Access Policy Fix (CLI)
+
+If the portal settings don't sync quickly enough, you can force the permissions using the CLI:
+
+
+### Replace <vault-name> with yours
+        az keyvault set-policy \
+          --name <vault-name> \
+          --object-id $(az ad signed-in-user show --query id -o tsv) \
+          --key-permissions get list encrypt decrypt
+
+Logic: This command bypasses the UI and directly tells the Key Vault: "Let this specific user ID lock (Encrypt) and unlock (Decrypt) the files."
+3. Verifying File Existence & Content
+
+After encryption/decryption, always verify your directory and file integrity:
+Bash
+
+### List all files in the current directory
+ls -lh
+
+# Check if the decrypted file matches the original content
+        cat /root/DecryptedData.txt
+
+4. Handling Binary Output
+
+The .bin file generated during encryption is a Binary file (non-human readable).
+
+    Warning: If you try to cat EncryptedData.bin, it will show scrambled characters. This is normal; it confirms the data is successfully protected and cannot be read without the Key Vault's decryption process.
