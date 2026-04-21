@@ -7,13 +7,24 @@ This project demonstrates how to protect sensitive information using Azure Key V
 
 # Azure Portal
 
+![SS](https://github.com/mehediasif0001/azure/blob/main/Encrypt%20Decrypt%20file%20using%20Key%20Vault/images/Screenshot_1.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Encrypt%20Decrypt%20file%20using%20Key%20Vault/images/Screenshot_2.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Encrypt%20Decrypt%20file%20using%20Key%20Vault/images/Screenshot_3.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Encrypt%20Decrypt%20file%20using%20Key%20Vault/images/Screenshot_4.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Encrypt%20Decrypt%20file%20using%20Key%20Vault/images/Screenshot_5.png)
+
 
 
 
 
 
 # CLI 
+![SS](https://github.com/mehediasif0001/azure/blob/main/Encrypt%20Decrypt%20file%20using%20Key%20Vault/images/Screenshot_6.png)
+
+
+
 1. Prepare the Data (Base64 Encoding)
+
 
 why?: Before sending data to Azure CLI, we encode it to Base64. This ensures that special characters or new lines in the file don't break the CLI command.
 
