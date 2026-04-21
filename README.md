@@ -34,7 +34,8 @@ Welcome to my Azure project repository! This collection documents my journey thr
 ---
 
 ## 👤 Author
-**Mehedi Hasan Asif** *Computer Technology Student | Fourth Semester* *Cloud & DevOps Enthusiast*
+**Mehedi Hasan Asif** 
+LinkedIn: https://www.linkedin.com/in/asifsec/
 
 ---
-*Last Updated: April 2026*
+
