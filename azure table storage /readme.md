@@ -6,6 +6,7 @@ both Azure Portal and Azure CLI methods for creating the storage account, tables
 1. Create a Storage Account
 
     Portal: Go to Storage accounts > Create. Name it ```datacentertablest2100``` in the East US region with Standard LRS.
+   ![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_1.png)
 
  # CLI Command:
 
@@ -21,6 +22,7 @@ Why? : A Storage Account is the top-level container for all Azure Storage servic
 # 2. Create a Table Storage Table
 
     Portal: Inside your storage account, go to Data storage > Tables. Click + Table and name it tasks.
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_2.png)
 
 # CLI Command:
 
@@ -45,6 +47,11 @@ Why? : Each entity requires a PartitionKey (for grouping data) and a RowKey (for
 4. Insert Table Entities
 
     Portal (Storage Browser): Go to Storage browser > Tables > tasks. Click + Add entity. Manually add the properties and values.
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_3.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_4.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_5.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_6.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_7.png)
 
 # CLI Command:
 
@@ -72,4 +79,4 @@ Why? : Inserting entities via CLI is faster for automation, while the Storage Br
       --account-name datacentertablest2100 \
       --table-name tasks \
       --output table
-
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure%20table%20storage%20/images/Screenshot_8.png)
