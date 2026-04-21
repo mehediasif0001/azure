@@ -38,8 +38,21 @@ Automated the upload of the web assets from the local environment to the Azure s
       --file index.html \
       --name index.html
 
-✅ Validation
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_1.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_2.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_3.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_4.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_5.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_6.png)
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_7.png)
 
-The deployment was verified by accessing the Primary Static Website Endpoint. The portal successfully served the index.html content to external browsers.
+
+
+
+✅ Validation
+![SS](https://github.com/mehediasif0001/azure/blob/main/Static%20website%20hosting%20on%20Azure%20Storage%20/image/Screenshot_8.png)
+
+    The deployment was verified by accessing the Primary Static Website Endpoint. The portal successfully served the index.html content to external browsers.
+
 
 
