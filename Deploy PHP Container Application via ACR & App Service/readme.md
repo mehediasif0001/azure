@@ -16,14 +16,13 @@ hosting the image in Azure Container Registry (ACR), and deploying it as a manag
 
     Crucial: After deployment, enabled the Admin user under the Access keys settings.
 
- ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_1.png)
- ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_2.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_1.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_2.png)
 
 Why? : ACR is our private library for Docker images. Enabling the Admin user provides the necessary credentials (Username/Password)
 so that the App Service can pull the private image.
 
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_3.png)
-
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_3.png)
 # 2. Build and Push the Image (CLI Operations)
 
     CLI: Performed all Docker operations on the azure-client host.
@@ -32,29 +31,29 @@ so that the App Service can pull the private image.
     cd /root/webapp
     vi Dockerfile
     
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_9.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_9.png)
 # Create the optimized Dockerfile
 
       FROM php:8.2-apache
       COPY . /var/www/html/
       EXPOSE 80
 
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_5.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_5.png)
 # Login to the Registry
     az acr login --name devopsacr8690
 
 # Build and Tag the image
 
     docker build -t devopsacr8690.azurecr.io/php-app:v1 .
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_6.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_6.png)
 
 # Push the image to ACR
 
     docker push devopsacr8690.azurecr.io/php-app:v1
 
 Why? : We use php:8.2-apache because the built-in Apache server keeps the container running persistently. Using az acr login ensures a secure authenticated tunnel for pushing the image.
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_7.png)
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_8.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_7.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_8.png)
 ## 3. Create an Azure App Service
 
     Portal: Created a Web App with the following configuration:
@@ -71,8 +70,8 @@ Why? : We use php:8.2-apache because the built-in Apache server keeps the contai
 
 Why? : App Service for Containers (Linux) is a PaaS solution that runs Dockerized apps without managing the underlying VM. We use the B1 plan to balance performance and cost for this lab.
 
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_11.png)
-![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/images/Screenshot_10.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_11.png)
+ ![SS](https://github.com/mehediasif0001/azure/blob/main/Deploy%20PHP%20Container%20Application%20via%20ACR%20%26%20App%20Service/img/Screenshot_10.png)
 
 4. Verification and Troubleshooting
 
