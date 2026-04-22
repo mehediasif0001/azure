@@ -100,3 +100,28 @@ Listener:
 
 **Why? :** This configuration sets up a Layer 7 load balancer. It listens for requests on the public IP and routes them to the private Nginx server, 
 providing an extra layer of security and high availability.
+
+# ScreenShot:
+
+![SS1](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_1.png)
+![SS2](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_2.png)
+![SS3](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_3.png)
+![SS4](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_4.png)
+![SS5](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_5.png)
+![SS6](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_6.png)
+![SS7](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_7.png)
+![SS8](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_8.png)
+![SS9](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_9.png)
+![SS10](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_10.png)
+![SS11](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_11.png)
+![SS12](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_12.png)
+![SS13](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_13.png)
+![SS14](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_14.png)
+![SS15](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_15.png)
+![SS16](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_16.png)
+![SS17](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_17.png)
+![SS18](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_18.png)
+
+![SS20](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_20.png)
+![SS21](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_21.png)
+![SS22](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_22.png)
