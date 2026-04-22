@@ -13,7 +13,7 @@ Welcome to my Azure project repository! This collection documents my journey thr
 | 05 | [**Static Website Hosting**](./Static%20website%20hosting%20on%20Azure%20Storage) | Low-cost web hosting using Azure Blob Storage. |
 | 06 | [**Multi-Tier Architecture (PHP-MySQL)**](./Azure-Multi-Tier-Architecture:PHP-MySQL-Cloud-Integration) | Cloud infrastructure for Full-Stack applications. |
 | 07 | [**Backup Azure SQL Database**](./Backup%20an%20Azure%20SQL%20Database) | Automated database protection & recovery. |
-| 08 | [**VM User Data Automation**](./Azure-VM-User%20Data%20for%20automation) | Automating VM bootstrapping via Custom Data. |
+| 08 | [**VM User Data Automation**](./Azure-VM-User-Data-for-automation) | Automating VM bootstrapping via Custom Data. |
 | 09 | [**Private Endpoint (Secure Blob Access)**](./secure%20blob%20storage%20access%20by%20Private%20Endpoint) | VNet security and private connectivity for storage. |
 | 10 | [**Storage Lifecycle Management**](./Storage%20Lifecycle) | Automated data tiering and retention policies. |
 | 11 | [**Bicep (IaC)**](./bicep) | Modular Infrastructure as Code (IaC) templates. |
