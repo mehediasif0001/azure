@@ -11,7 +11,7 @@ Welcome to my Azure project repository! This collection documents my journey thr
 | 03 | [**Azure Table Storage**](./azure%20table%20storage) | Managing NoSQL Key-Value data entities. |
 | 04 | [**Encrypt Decrypt via Key Vault**](./Encrypt%20Decrypt%20file%20using%20Key%20Vault) | Enterprise-grade encryption & Secret management. |
 | 05 | [**Static Website Hosting**](./Static%20website%20hosting%20on%20Azure%20Storage) | Low-cost web hosting using Azure Blob Storage. |
-| 06 | [**Multi-Tier Architecture (PHP-MySQL)**](./Azure%20Multi-Tier%20Architecture:%20PHP-MySQL%20Clo...) | Cloud infrastructure for Full-Stack applications. |
+| 06 | [**Multi-Tier Architecture (PHP-MySQL)**](./Azure-Multi-Tier-Architecture:PHP-MySQL-Cloud-Integration) | Cloud infrastructure for Full-Stack applications. |
 | 07 | [**Backup Azure SQL Database**](./Backup%20an%20Azure%20SQL%20Database) | Automated database protection & recovery. |
 | 08 | [**VM User Data Automation**](./Azure-VM-User%20Data%20for%20automation) | Automating VM bootstrapping via Custom Data. |
 | 09 | [**Private Endpoint (Secure Blob Access)**](./secure%20blob%20storage%20access%20by%20Private%20Endpoint) | VNet security and private connectivity for storage. |
