@@ -1,5 +1,7 @@
 # 🌐 Complete Configuration: Azure AGW & Nginx Web Server
 
+![SS](https://github.com/mehediasif0001/azure/blob/main/azure-agw-nginx-infrastructure/imgs/Screenshot_19.png)
+
 This documentation provides the exact configuration parameters used to build a secure, load-balanced web environment on Azure.
 🏗️ Step 1: Network Security Group (NSG) Configuration
 
