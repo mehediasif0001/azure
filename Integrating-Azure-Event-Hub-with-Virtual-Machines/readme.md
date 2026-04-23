@@ -62,3 +62,15 @@ Verification was performed using Azure Portal Metrics. The spikes in the Incomin
 
     Reliability: 0% Server Errors recorded during the data streaming phase.
 
+![SS1](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_1.png)
+![SS2](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_2.png)
+![SS3](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_3.png)
+![SS4](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_4.png)
+![SS5](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_5.png)
+![SS6](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_6.png)
+![SS7](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_7.png)
+![SS8](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_8.png)
+![SS9](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_9.png)
+![SS10](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_10.png)
+![SS11](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_11.png)
+![SS12](https://github.com/mehediasif0001/azure/blob/main/Integrating-Azure-Event-Hub-with-Virtual-Machines/imgs/Screenshot_12.png)
