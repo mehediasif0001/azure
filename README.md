@@ -19,6 +19,7 @@ Welcome to my Azure project repository! This collection documents my journey thr
 | 11 | [**Bicep (IaC)**](./bicep) | Modular Infrastructure as Code (IaC) templates. |
 | 12 | [**Administrator Identity**](./Administrator-Identity) | Implementing least privilege access with RBAC. |
 | 13 | [**Azure CLI Master Guide**](./cli) | Essential command-line automation for DevOps. |
+| 14 | [**Azure Event Hubs: Centralized Log Streaming from Linux VM**](./Integrating-Azure-Event-Hub-with-Virtual-Machines) | To build a high-scale, real-time "Log Aggregation" pipeline that centralizes data from distributed servers into a single stream for monitoring and analytics. |
 -----
 
 ## 🛠️ Technology Stack
