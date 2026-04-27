@@ -80,6 +80,13 @@ On the client host terminal:
 
     [x] Local Integrity: Verified file download at /opt/devops-db-backup.bacpac on the client host.
 
+  ![SS](https://github.com/mehediasif0001/azure/blob/main/SQL-Database-Migration-and-Setup/image/Screenshot_1.png)
+  ![SS](https://github.com/mehediasif0001/azure/blob/main/SQL-Database-Migration-and-Setup/image/Screenshot_2.png)
+  ![SS](https://github.com/mehediasif0001/azure/blob/main/SQL-Database-Migration-and-Setup/image/Screenshot_3.png)
+  ![SS](https://github.com/mehediasif0001/azure/blob/main/SQL-Database-Migration-and-Setup/image/Screenshot_4.png)
+
+  
+
 🔐 Security Best Practices
 
     Firewall Rules: Access is restricted to specific IP ranges.
