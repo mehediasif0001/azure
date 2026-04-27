@@ -1,3 +1,5 @@
+![SS](https://github.com/mehediasif0001/azure/blob/main/SQL-Database-Migration-and-Setup/image/Gemini_Generated_Image_az6xl8az6xl8az6x.png)
+
 ☁️ Azure SQL Migration & Data Recovery Strategy
 
 This repository contains the documentation and implementation details for migrating infrastructure to Azure SQL Database,
